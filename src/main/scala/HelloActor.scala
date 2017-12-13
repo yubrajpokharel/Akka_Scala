@@ -10,7 +10,9 @@ class HelloActor extends Actor{
   }
 }
 
-object main extends App{
+object main
+  //extends App
+{
 
   //creating a actor system
   val system = ActorSystem("helloworld")

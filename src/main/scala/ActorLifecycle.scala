@@ -34,7 +34,9 @@ class ActorLifecycle extends Actor {
 
 }
 
-object lifeCycleDemo extends App {
+object lifeCycleDemo
+   // extends App
+{
   val system = ActorSystem("lifecycle")
   val actorLifecycle = system.actorOf(Props[ActorLifecycle], name = "actorLifeCycle")
 
@@ -49,6 +51,6 @@ object lifeCycleDemo extends App {
   print("stopping actor")
   system.stop(actorLifecycle)
 
-  println("shutting dowm system")2
+  println("shutting dowm system")
   system.shutdown()
 }
